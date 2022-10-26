@@ -3,8 +3,10 @@
 ## Will push code shortly :D 
 
 
-![image](https://user-images.githubusercontent.com/39345855/198093382-5d77381a-dfaa-4fc1-bf87-8aa7ce6aaad3.png)
+# Tables that holds meta data 
+![image](https://user-images.githubusercontent.com/39345855/198097321-045baafe-815a-480e-a15c-e04a3811b744.png)
 
+* This 
 
 
 Smart way to Capture Jobs and Process Meta Data Using DynamoDB | Project Demo | Python Templates | Alerts
