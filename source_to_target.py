@@ -39,7 +39,7 @@ class Database(object):
                     "id": 1,
                     "destination_field_name": "customerID",
                     "destination_field_mapping": "customerID",
-                    "destination_field_type": "str",
+                    "destination_field_type": "int",
                     "default_value": -1
                 }
             ],
@@ -199,18 +199,20 @@ class Transform(object):
 
                 dtypes = [str, float, list, int, set]
 
+
                 for dtype in dtypes:
 
                     """Datatype Conversion """
                     if destination_field_type == str(dtype.__name__):
+                        print("dtype", str(dtype.__name__))
 
                         """is source is none insert default value"""
                         if source_data_value is None:
-                            self.json_data_transformed[destination_field_name] = dtype(
+                            self.json_data_transformed[destination_field_name] = dtype.__call__(
                                 destination_mappings_json_object.get("default_value")
                             )
                         else:
-                            self.json_data_transformed[destination_field_name] = source_data_value
+                            self.json_data_transformed[destination_field_name] = dtype.__call__(source_data_value)
 
         print(self.json_data_transformed)
 
@@ -218,7 +220,7 @@ class Transform(object):
 def main():
 
     json_incoming_data = {
-        "id": "12213"
+        "id": None
     }
 
     helper = Transform(input_json=json_incoming_data)
