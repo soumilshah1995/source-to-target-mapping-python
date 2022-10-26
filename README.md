@@ -1,6 +1,4 @@
 # source-to-target-mapping-python
-
-## Will push code shortly :D 
 -----------------------------------------------------------------------------
 
 # Tables that holds meta data 
